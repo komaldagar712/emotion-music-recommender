@@ -8,7 +8,11 @@ app = Flask(__name__)
 app.secret_key = "secret123"
 
 # Load model
-model = load_model('model/emotion_model.hdf5', compile=False)
+# TEMP FAKE MODEL (for deployment demo)
+def predict_emotion(face):
+    import random
+    emotions = ["Happy", "Sad", "Angry", "Surprise", "Neutral"]
+    return random.choice(emotions), 90
 
 emotion_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
 
