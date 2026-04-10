@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>📄 About Project</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/admin_login">Admin</a>
+    </div>
+</nav>
+
+<div class="main">
+
+<div class="about-container">
+<h1>Emotion-Based Music Recommender 🎧</h1>
+
+<h2>📌 Project Description</h2>
+<p>
+This project detects human emotions using facial expressions and recommends songs accordingly.
+It combines Computer Vision and Machine Learning to provide a personalized music experience.
+</p>
+
+<h2>⚙️ Technologies Used</h2>
+<ul>
+<li>Python</li>
+<li>Flask (Backend)</li>
+<li>OpenCV (Face Detection)</li>
+<li>TensorFlow / Keras (CNN Model)</li>
+<li>HTML, CSS, JavaScript</li>
+</ul>
+
+<h2>🧠 Working of the Project</h2>
+<p>
+1. Webcam captures live image<br>
+2. OpenCV detects face using Haar Cascade<br>
+3. Image is converted to grayscale<br>
+4. CNN model predicts emotion<br>
+5. Emotion is mapped to song list<br>
+6. Songs are displayed to user<br>
+</p>
+
+<h2>🤖 Machine Learning Model</h2>
+<p>
+A Convolutional Neural Network (CNN) trained on FER-2013 dataset is used.
+It classifies emotions into:
+Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral.
+</p>
+
+<h2>✨ Features</h2>
+<ul>
+<li>Real-time emotion detection</li>
+<li>Music recommendation</li>
+<li>Admin dashboard</li>
+<li>History tracking</li>
+</ul>
+
+<h2>🚀 Future Scope</h2>
+<ul>
+<li>Spotify integration</li>
+<li>Voice emotion detection</li>
+<li>Mobile application</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h2>👨‍💻 Developer Details</h2>
+
+<p><b>Name:</b> Komal Dagar</p>
+<p><b>Course:</b> B.Tech CSE</p>
+<p><b>Roll No:</b> 2024UCS1614</p>
+<p><b>College:</b> NSUT</p>
+
+<h2>📞 Contact</h2>
+<p><b>Phone:</b> 8700470628</p>
+<p><b>Email:</b>komal_ug24@nsut.ac.in</p>
+</div>
+
+</div>
+
+<footer>
+<b>Made by Komal Dagar | 2024UCS1614 | B.Tech CSE | </b>
+</footer>
+
+</body>
+</html>

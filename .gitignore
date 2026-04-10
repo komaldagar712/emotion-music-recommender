@@ -1,0 +1,7 @@
+.venv/
+train/
+test/
+.cache/
+__pycache__/
+*.pyc
+history.json

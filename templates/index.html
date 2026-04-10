@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- 🔥 NAVBAR FIX -->
+<div class="navbar">
+    <h2>🎧 Emotion AI</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/admin_login">Admin</a>
+    </div>
+</div>
+
+<!-- 🔥 MAIN CONTENT -->
+<div class="main">
+
+    <h1>Emotion-Based Music Recommender</h1>
+
+    <!-- CAMERA + BUTTON -->
+    <div class="camera-section">
+        <video id="video" autoplay></video>
+        <button onclick="capture()">Detect Emotion</button>
+    </div>
+
+    <!-- RESULT -->
+    <div class="card">
+        <h2 id="emotion">Your Emotion:</h2>
+        <ul id="songs"></ul>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

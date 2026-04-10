@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+<<h1>📜 Emotion History</h1>
+
+{% for item in history %}
+<div class="card">
+    <h3>{{ item.emotion }}</h3>
+    <p>{{ item.time }}</p>
+</div>
+{% endfor %}

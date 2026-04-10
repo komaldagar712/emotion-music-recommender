@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>⚙️ Admin Panel</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/theory">Theory</a>
+    </div>
+</nav>
+
+<div class="main">
+
+    <h1>📊 Emotion Analytics</h1>
+
+    <!-- Chart -->
+    <div class="card">
+        <canvas id="chart"></canvas>
+    </div>
+
+    <!-- History -->
+    <h1>📜 Detection History</h1>
+
+    {% for item in history %}
+    <div class="card">
+        <h3>{{ item.emotion }}</h3>
+        <p>{{ item.time }}</p>
+    </div>
+    {% endfor %}
+
+</div>
+
+<footer>
+    Admin Access Only 🔒
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const data = [];
+new Chart(document.getElementById('chart'), {
+    type: 'bar',
+    data: {
+        labels: Object.keys(data),
+        datasets: [{
+            label: 'Emotion Count',
+            data: Object.values(data)
+        }]
+    }
+});
+</script>
+
+</body>
+</html>
