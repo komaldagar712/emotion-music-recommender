@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, jsonify, session, redirect
-from tensorflow.keras.models import load_model
 import numpy as np
 import cv2
 import base64
@@ -82,9 +81,7 @@ def detect():
         # Predict
         prediction = model.predict(face)
         emotion_index = np.argmax(prediction)
-        emotion = emotion_labels[emotion_index]
-
-        confidence = round(float(np.max(prediction)) * 100, 2)
+        emotion, confidence = predict_emotion(None)
 
         # Songs
         songs = {
